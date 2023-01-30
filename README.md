@@ -3,6 +3,7 @@ This repo is created for advanced javascript concepts practice
 
 ## Topics
 
+- Clouser
 - Prototype
 - Recursion
 - Decorators functions
