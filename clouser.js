@@ -4,27 +4,47 @@
 //// Lexical scope defines how variable name are resolved in nested functions.
 //// Nested child functions have access to the scope of their parent functions.
 
-// global scope
-let globalVariable = 1;
+// // global scope
+// let globalVariable = 1;
 
-function parent() {
-    // local scope or block scope
-    const localVariable = 2;
-    console.log("global var in parent", globalVariable);
-    console.log("parent var", localVariable);
+// const parent =()=> {
+//     // local scope or block scope
+//     const localVariable = 2;
+//     console.log("global var in parent", globalVariable);
+//     console.log("parent var", localVariable);
 
-    function child() {
-        const x = 5;
-        console.log("child var", x);
-        console.log("parent var in child", localVariable);
-        console.log("global var in child", globalVariable);
-        console.log(globalVariable += 5);
-    }
+//     const child = ()=> {
+//         const x = 5;
+//         console.log("started child function", x);
+//         console.log("parent var in child", localVariable);
+//         console.log("global var in child", globalVariable);
+//         console.log(globalVariable += 5);
+//     }
 
-    return child;
-}
+//     return child;
+// }
 
-const result = parent();
+// const result = parent();
+// result();
 
-result();
 
+//// clouser with anonymous imidate invoked function
+// const anonymousFunc =(()=>{
+//         // local scope or block scope
+//         let localVariable = 2;
+//         console.log("parent var", localVariable);
+    
+//         const child = ()=> {
+//             const x = 5;
+//             console.log("started child function", x);
+//             console.log("parent var in child", localVariable);
+//             console.log(localVariable += 1);
+//         }
+    
+//         return child;
+//     }
+// )();
+
+// anonymousFunc();
+// anonymousFunc();
+// anonymousFunc();
